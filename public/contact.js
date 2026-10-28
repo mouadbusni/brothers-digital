@@ -28,6 +28,7 @@ function submissionFor(previous, payload, createId) {
     invalid_message: tr('Décrivez votre idée en au moins dix caractères.','Describe your idea in at least ten characters.'),
     missing_service: tr('Choisissez au moins un besoin.','Choose at least one service.'),
     rate_limited: tr('Plusieurs demandes ont déjà été envoyées. Réessayez dans quelques minutes ou contactez-nous sur Instagram.','Several enquiries have already been sent. Try again in a few minutes or contact us on Instagram.'),
+    submission_conflict: tr('Cette référence appartient déjà à une demande. Réessayez pour envoyer votre nouvelle idée.','This reference belongs to an earlier enquiry. Please retry to send your new idea.'),
     temporarily_unavailable: tr('Votre demande n’a pas pu être confirmée. Vos informations sont conservées ici. Réessayez ou contactez-nous sur Instagram.','We couldn’t confirm your enquiry. Your information is still here. Try again or contact us on Instagram.'),
   };
   function formValues() {
@@ -52,12 +53,13 @@ function submissionFor(previous, payload, createId) {
     try { sessionStorage.setItem(draftKey, JSON.stringify({ savedAt: Date.now(), values: formValues(), brief, submission: lastSubmission })); updateDraftUI(true); } catch { updateDraftUI(); }
   }
   function scheduleDraft() { confirmed = false; updateDraftUI(); clearTimeout(draftTimer); draftTimer = setTimeout(persistDraft, 400); }
-  function clearStatus() { status.textContent = ''; status.classList.remove('is-error'); }
+  function clearStatus() { status.textContent = ''; status.classList.remove('is-error'); form.querySelectorAll('[aria-invalid]').forEach(input => input.removeAttribute('aria-invalid')); }
   function resetBrief() { $('#brief-form').reset(); $('#brief-output').value = ''; $('#brief-result').hidden = true; $('#brief-form').hidden = false; $('#copy-status').textContent = ''; showBriefStep(1); }
   function clearDraft() {
     clearTimeout(draftTimer); form.reset(); resetBrief(); lastSubmission = null; confirmed = false;
     try { sessionStorage.removeItem(draftKey); } catch {}
     clearStatus(); updateDraftUI(); $('#draft-state').textContent = tr('Brouillon effacé.','Draft cleared.');
+    if (!form.hidden) form.elements.name.focus({ preventScroll: true });
   }
   form.addEventListener('input', () => { clearStatus(); scheduleDraft(); });
   form.addEventListener('change', scheduleDraft);
@@ -76,6 +78,7 @@ function submissionFor(previous, payload, createId) {
     submitting = true; $('.brief-assist').inert = true; send.disabled = true; send.setAttribute('aria-busy','true'); form.setAttribute('aria-busy','true');
     send.firstElementChild.textContent = tr('Envoi en cours…','Sending…');
     const inputs = [...form.querySelectorAll('input,textarea,select')]; inputs.forEach(input => { input.disabled = true; }); $('#clear-draft').disabled = true;
+    let invalidField = null;
     try {
       const response = await fetch('/api/inquiries', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload), signal: AbortSignal.timeout(18000) });
       const result = await response.json();
@@ -86,10 +89,15 @@ function submissionFor(previous, payload, createId) {
       $('#enquiry-success h4').setAttribute('tabindex','-1'); $('#enquiry-success h4').focus({ preventScroll: true });
       form.reset(); resetBrief(); $('.brief-assist').open = false; lastSubmission = null; updateDraftUI();
     } catch (error) {
+      if (error.message === 'submission_conflict') lastSubmission = null;
+      const fieldName = { invalid_name: 'name', invalid_email: 'email', invalid_message: 'message' }[error.message];
+      invalidField = fieldName ? form.elements[fieldName] : null;
+      invalidField?.setAttribute('aria-invalid','true');
       status.textContent = messages[error.message] || messages.temporarily_unavailable; status.classList.add('is-error'); persistDraft();
     } finally {
       submitting = false; $('.brief-assist').inert = false; inputs.forEach(input => { input.disabled = false; }); $('#clear-draft').disabled = false;
       send.disabled = false; send.removeAttribute('aria-busy'); form.removeAttribute('aria-busy'); send.firstElementChild.textContent = tr('Envoyer ma demande','Send my enquiry');
+      invalidField?.focus();
     }
   });
   $('#enquiry-reset').addEventListener('click', () => { clearDraft(); form.hidden = false; $('#enquiry-success').hidden = true; form.elements.name.focus({ preventScroll: true }); });

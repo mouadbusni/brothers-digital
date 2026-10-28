@@ -42,6 +42,7 @@ A clean clone uses the portable development profile and serves at `http://localh
 To check and build the application:
 
 ```bash
+npm test
 npm run typecheck
 npm run build
 ```
@@ -103,9 +104,11 @@ Edit presentation in `site-source/`. Run `node scripts/build-content.mjs` to reg
 
 The existing live website is published through Sites. `.openai/hosting.json` retains that Site's identity and storage bindings; it contains no login credentials. A GitHub push does not publish or change the live site automatically.
 
-The CI workflow runs a lockfile installation, TypeScript checks and a production build on pushes to `main` and pull requests. It does not deploy or access production enquiry data. Repository CI results are available only after the workflow has run on GitHub.
+The CI workflow runs a lockfile installation, enquiry regression tests, generated-page checks, TypeScript checks and a production build on pushes to `main` and pull requests. It does not deploy or access production enquiry data. Repository CI results are available only after the workflow has run on GitHub.
 
 The app's previous implementation and browser checks are recorded in [implementation notes](docs/implementation-notes.md), including the cloud environment's GPU and touch-testing limits. Current repository preparation results are recorded in [repository checks](docs/repository-checks.md).
+
+The final release review and remaining operational setup are recorded in [release checks](docs/release-checks.md).
 
 ## Attribution
 

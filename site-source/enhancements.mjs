@@ -44,8 +44,9 @@ export function enhanceDocument(html, { language, kind, url, projects, pageRoute
   }
   if (kind === 'contact') {
     html = html.replace('<form id="enquiry-form">', `<noscript><style>#enquiry-form{display:none!important}</style><p class="enquiry-note">${t('Le formulaire nécessite JavaScript. Vous pouvez nous contacter directement sur Instagram.', 'This form needs JavaScript. You can contact us directly on Instagram.')}</p></noscript><form id="enquiry-form" method="post" action="/api/inquiries">`);
+    html = html.replace('<input name="name"', '<input name="name" aria-describedby="enquiry-status"').replace('<input name="email"', '<input name="email" aria-describedby="enquiry-status"');
     html = html.replace('<fieldset class="enquiry-services">','<fieldset class="enquiry-services" aria-describedby="enquiry-status">');
-    html = html.replace('<textarea name="message"','<textarea name="message" aria-describedby="message-count"');
+    html = html.replace('<textarea name="message"','<textarea name="message" aria-describedby="message-count enquiry-status"');
     html = html.replace(/(<textarea name="message"[\s\S]*?<\/textarea><\/label>)/, `$1<div class="message-meta"><span id="draft-state" role="status"></span><button type="button" id="clear-draft" hidden>${t('Effacer le brouillon','Clear draft')}</button><span id="message-count">0 / 5 000</span></div>`);
     html = html.replace('<small id="enquiry-reference"></small>', `<div class="enquiry-reference-row"><small id="enquiry-reference"></small><button type="button" id="copy-reference">${t('Copier la référence','Copy reference')} ⧉</button></div>`);
     html = html.replace('<p class="enquiry-note"', `<p class="submit-shortcut">${t('Un dernier détail ? Prenez votre temps.','One last detail? Take your time.')}<span><kbd>Ctrl / ⌘</kbd> + <kbd>↵</kbd></span></p><p class="enquiry-note"`);

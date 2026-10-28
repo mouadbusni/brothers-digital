@@ -70,8 +70,12 @@ for(const language of ['fr','en'])for(let i=0;i<projects.length;i++){
  html=html.replace('<span class="lang-fr is-active">',`<span class="lang-fr${language==='fr'?' is-active':''}">`).replace('<span class="lang-en">',`<span class="lang-en${language==='en'?' is-active':''}">`);
  pages[url]=finish(html,language,url,alternate,p.title+' — Brothers Digital',p.summary[ix]).replace(/<meta property="og:image"[^>]*>/,`<meta property="og:image" content="${origin}${projectAsset(p)}">`);
 }
-pages['/404/']=finish(head+`<body><main class="not-found"><span data-logo></span><span class="eyebrow">404 / UNCHARTED TERRITORY</span><h1>Une autre<br><em>direction.</em></h1><p>Cette page n’existe pas. Le prochain projet, lui, commence peut-être ici.</p><a class="button-dark" href="/fr/">Retour au studio ↗</a></main></body></html>`,'fr','/404/','/en/','Page introuvable — Brothers Digital','Retrouvez le studio Brothers Digital.');
+for (const language of ['fr','en']) {
+ const url=`/${language}/404/`, alternate=language==='fr'?'/en/404/':'/fr/404/';
+ pages[url]=finish(baseHead+`<body><main class="not-found"><span data-logo></span><span class="eyebrow">404 / ${t(language,'HORS DES SENTIERS','UNCHARTED TERRITORY')}</span><h1>${t(language,'Une autre<br><em>direction.</em>','A different<br><em>direction.</em>')}</h1><p>${t(language,'Cette page n’existe pas. Le prochain projet, lui, commence peut-être ici.','This page doesn’t exist. Your next project could start here.')}</p><a class="button-dark" href="/${language}/">${t(language,'Retour au studio','Back to the studio')} ↗</a></main></body></html>`,language,url,alternate,t(language,'Page introuvable','Page not found')+' — Brothers Digital',t(language,'Retrouvez le studio Brothers Digital.','Return to Brothers Digital studio.')).replace('</head>','<meta name="robots" content="noindex,follow"></head>');
+}
+pages['/404/']=pages['/fr/404/'];
 fs.mkdirSync('generated',{recursive:true});fs.writeFileSync('generated/pages.json',JSON.stringify(pages));
 fs.writeFileSync('public/robots.txt',`User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: ${origin}/sitemap.xml\n`);
-const locations=Object.keys(pages).filter(p=>p!=='/'&&p!=='/404/');fs.writeFileSync('public/sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${locations.map(p=>`<url><loc>${origin+p}</loc></url>`).join('')}</urlset>`);
+const locations=Object.keys(pages).filter(p=>p!=='/'&&!p.endsWith('/404/'));fs.writeFileSync('public/sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${locations.map(p=>`<url><loc>${origin+p}</loc></url>`).join('')}</urlset>`);
 console.log(`Built ${Object.keys(pages).length} localized HTML documents, shared assets, robots.txt and sitemap.xml.`);
