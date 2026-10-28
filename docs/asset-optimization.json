@@ -1,0 +1,119 @@
+{
+  "source": "site-source/assets",
+  "production": "public/assets",
+  "before_bytes": 6274728,
+  "after_bytes": 714278,
+  "reduction_percent": 88.62,
+  "logo_viewBox": "0 0 742 567",
+  "logo_native_silhouette_iou": 0.988491,
+  "exports": [
+    {
+      "file": "sculpture-640.webp",
+      "bytes": 34310,
+      "dimensions": [
+        640,
+        640
+      ]
+    },
+    {
+      "file": "sculpture-1024.webp",
+      "bytes": 71950,
+      "dimensions": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "file": "identity-800.webp",
+      "bytes": 29882,
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "file": "identity-1536.webp",
+      "bytes": 82400,
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "file": "portfolio-640.webp",
+      "bytes": 38530,
+      "dimensions": [
+        640,
+        400
+      ]
+    },
+    {
+      "file": "portfolio-1200.webp",
+      "bytes": 99692,
+      "dimensions": [
+        1200,
+        750
+      ]
+    },
+    {
+      "file": "amine-640.webp",
+      "bytes": 16186,
+      "dimensions": [
+        640,
+        400
+      ]
+    },
+    {
+      "file": "amine-1200.webp",
+      "bytes": 41542,
+      "dimensions": [
+        1200,
+        750
+      ]
+    },
+    {
+      "file": "archive-640.webp",
+      "bytes": 29972,
+      "dimensions": [
+        640,
+        400
+      ]
+    },
+    {
+      "file": "archive-1200.webp",
+      "bytes": 73810,
+      "dimensions": [
+        1200,
+        750
+      ]
+    },
+    {
+      "file": "brand-mark.svg",
+      "bytes": 10079
+    },
+    {
+      "file": "favicon.svg",
+      "bytes": 10188
+    },
+    {
+      "file": "studio-bold.woff",
+      "bytes": 32444
+    },
+    {
+      "file": "studio-regular.woff",
+      "bytes": 32512
+    },
+    {
+      "file": "studio-bold.woff2",
+      "bytes": 29084
+    },
+    {
+      "file": "studio-regular.woff2",
+      "bytes": 29180
+    }
+  ],
+  "notes": [
+    "WOFF fallbacks retained for integration convenience; WOFF2 is preferred.",
+    "French/English Latin, Latin Extended-A, punctuation, currency and arrow/mathematical glyph subsets retained; character maps and em metrics round-trip validated."
+  ]
+}

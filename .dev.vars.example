@@ -1,0 +1,8 @@
+# Copy this file to .dev.vars for local development.
+# Production values belong in the hosting environment, never in Git.
+RATE_LIMIT_SALT="replace-with-a-random-local-value"
+
+# Optional notifications: configure all three with an approved sender.
+RESEND_API_KEY=""
+CONTACT_TO_EMAIL=""
+CONTACT_FROM_EMAIL=""

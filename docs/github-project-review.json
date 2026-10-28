@@ -1,0 +1,77 @@
+{
+  "reviewed_on": "2026-10-27",
+  "owner": "mouadbusni",
+  "repositories": [
+    "AURA-V9-main",
+    "Car-parts",
+    "MoD_Portfolio",
+    "Prayer-Times"
+  ],
+  "selected": [
+    "AURA-V9-main",
+    "Car-parts"
+  ],
+  "sources": [
+    {
+      "key": "aura-home",
+      "url": "https://github.com/mouadbusni/AURA-V9-main/blob/main/src/pages/HomePage.tsx",
+      "sha": "b2b1dbd70128cffdbe5b911fb024eadf50e78b37"
+    },
+    {
+      "key": "aura-app",
+      "url": "https://github.com/mouadbusni/AURA-V9-main/blob/main/src/App.tsx",
+      "sha": "ddcb2673c0f045df312331bb664086a66767475e"
+    },
+    {
+      "key": "aura-products",
+      "url": "https://github.com/mouadbusni/AURA-V9-main/blob/main/src/pages/ProductsPage.tsx",
+      "sha": "dd58c1911e9e183ad9f303a12367cb584764582f"
+    },
+    {
+      "key": "aura-cart",
+      "url": "https://github.com/mouadbusni/AURA-V9-main/blob/main/src/context/CartContext.tsx",
+      "sha": "84113427f5010ee2599981de910179db91497d15"
+    },
+    {
+      "key": "aura-tailwind",
+      "url": "https://github.com/mouadbusni/AURA-V9-main/blob/main/tailwind.config.js",
+      "sha": "045349ba4d224a2fb21b8ed04e94cd6bee26a231"
+    },
+    {
+      "key": "car-home",
+      "url": "https://github.com/mouadbusni/Car-parts/blob/main/components/hero-section.tsx",
+      "sha": "2e24b35e886acb2decf1745e79685bf3ff8af453"
+    },
+    {
+      "key": "car-products",
+      "url": "https://github.com/mouadbusni/Car-parts/blob/main/app/products/page.tsx",
+      "sha": "749a0b59725ccc6130b4becd90ff953ee182f1d0"
+    },
+    {
+      "key": "car-product-detail",
+      "url": "https://github.com/mouadbusni/Car-parts/blob/main/app/products/[slug]/page.tsx",
+      "sha": "87ecac393533d2564208389a45d14f27ac6d9b46"
+    },
+    {
+      "key": "car-header",
+      "url": "https://github.com/mouadbusni/Car-parts/blob/main/components/header.tsx",
+      "sha": "ffda78fe5ef868467205d6491d6bbe0f5d433331"
+    }
+  ],
+  "validation": {
+    "html_documents": 24,
+    "portfolio_entries": 6,
+    "new_localized_case_pages": 4,
+    "local_links_and_images": "passed",
+    "production_build": "passed",
+    "browser_checks": [
+      "GitHub filter selects two projects",
+      "English/French switch preserves category",
+      "Gallery and index layouts",
+      "SVG preview loads and zooms to 140%",
+      "390px work and 360px case frames without horizontal overflow",
+      "Three source reference cards fit narrow layout"
+    ],
+    "presentation": "Custom editorial covers; source features verified, runtime deployment of projects not asserted"
+  }
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1200" y2="900" gradientUnits="userSpaceOnUse"><stop stop-color="#e6e6df"/><stop offset="1" stop-color="#c8cbc4"/></linearGradient>
+    <linearGradient id="metal" x1="510" y1="100" x2="1040" y2="700" gradientUnits="userSpaceOnUse"><stop stop-color="#444c49"/><stop offset=".22" stop-color="#bdc4bd"/><stop offset=".38" stop-color="#eef0e7"/><stop offset=".52" stop-color="#7b8580"/><stop offset=".68" stop-color="#d7ddd3"/><stop offset=".85" stop-color="#5e6863"/><stop offset="1" stop-color="#2b3531"/></linearGradient>
+    <linearGradient id="side" x1="620" y1="200" x2="1050" y2="680" gradientUnits="userSpaceOnUse"><stop stop-color="#1c2924"/><stop offset=".6" stop-color="#9aa59b"/><stop offset="1" stop-color="#273b30"/></linearGradient>
+    <pattern id="lines" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" stroke="#3b4b40" stroke-opacity=".07"/></pattern>
+    <filter id="drop" x="-50%" y="-50%" width="220%" height="230%"><feDropShadow dx="0" dy="25" stdDeviation="20" flood-color="#304034" flood-opacity=".25"/></filter>
+  </defs>
+  <path fill="url(#paper)" d="M0 0h1200v900H0z"/>
+  <path fill="url(#lines)" d="M0 0h1200v900H0z"/>
+  <path d="M72 100h1056M72 800h1056" stroke="#263a2d" stroke-opacity=".28"/>
+  <g font-family="Arial,Helvetica,sans-serif" fill="#202d26">
+    <text x="76" y="148" font-size="15" letter-spacing="4">PRECISION / AUTOMOTIVE CATALOG</text>
+    <text x="65" y="340" font-size="154" font-weight="700" letter-spacing="-10">AutoPro</text>
+    <text x="78" y="390" font-size="20" fill="#546156">Performance, piece by piece.</text>
+  </g>
+  <g transform="translate(855 513) rotate(-23) skewX(-12)" filter="url(#drop)">
+    <ellipse cy="22" rx="232" ry="232" fill="url(#side)"/>
+    <path d="M232 0a232 232 0 1 0-464 0 232 232 0 0 0 464 0Zm-150 0a82 82 0 1 1-164 0 82 82 0 0 1 164 0Z" fill="url(#metal)" fill-rule="evenodd"/>
+    <circle r="217" stroke="#f8faf3" stroke-opacity=".7"/>
+    <circle r="185" stroke="#45594a" stroke-opacity=".3"/>
+    <circle r="147" stroke="#eff4e9" stroke-opacity=".6"/>
+    <circle r="121" stroke="#526852" stroke-opacity=".5"/>
+    <path d="M100 0a100 100 0 1 0-200 0 100 100 0 0 0 200 0ZM49 0a49 49 0 1 1-98 0 49 49 0 0 1 98 0Z" fill="url(#side)" fill-rule="evenodd"/>
+    <g fill="#3e4c41" stroke="#d2dbcb" stroke-width="2">
+      <circle cx="0" cy="-74" r="9"/><circle cx="70" cy="-23" r="9"/><circle cx="43" cy="60" r="9"/><circle cx="-43" cy="60" r="9"/><circle cx="-70" cy="-23" r="9"/>
+    </g>
+    <g stroke="#5b6d5e" stroke-width="5" stroke-linecap="round" opacity=".6">
+      <path d="m28-157 16-43m53 73 31-34m12 87 40-20m-29 71 42 1m-67 64 35 22m-87 12 23 39m-84-27 4 42m-75-59-14 40m-47-85-31 30m-13-91-40 12m49-72-42-8m76-49-32-28m94-1-17-38"/>
+    </g>
+  </g>
+  <path d="M706 431h398M855 343v392" stroke="#597061" stroke-opacity=".28" stroke-dasharray="5 7"/>
+  <circle cx="855" cy="513" r="272" stroke="#34513c" stroke-opacity=".2" stroke-dasharray="3 8"/>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <rect x="77" y="487" width="48" height="48" rx="3" fill="#ac5234"/>
+    <path d="m89 511 8 8 17-18" stroke="#f1e8da" stroke-width="2"/>
+    <text x="77" y="592" fill="#263a2d" font-size="29" letter-spacing="-.7">Find. Filter.</text>
+    <text x="77" y="630" fill="#263a2d" font-size="29" letter-spacing="-.7">Explore the details.</text>
+    <text x="78" y="704" fill="#576a5b" font-size="11" letter-spacing="2.3">SEARCH + CATEGORIES</text>
+    <text x="78" y="729" fill="#576a5b" font-size="11" letter-spacing="2.3">GRID / LIST + PRODUCT PAGES</text>
+    <text x="76" y="839" fill="#4c6051" font-size="12" letter-spacing="2">NEXT.JS / TYPESCRIPT / SUPABASE</text>
+    <text x="1125" y="839" text-anchor="end" fill="#4c6051" font-size="12" letter-spacing="2">EDITORIAL PROJECT COVER</text>
+  </g>
+</svg>

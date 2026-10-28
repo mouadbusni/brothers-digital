@@ -1,0 +1,18 @@
+/* The established olive panel and line artwork stay consistent across all disciplines. */
+.studio-art[data-lens]{background:#a3aa91;color:#202522;overflow:clip}
+.studio-art[data-lens] .studio-art-note{color:#202522}
+.studio-art[data-lens] .studio-lens{border-color:#20252233}
+.studio-art[data-lens] .studio-lens-tabs button{background:#f2efe742;border-color:#2025221a;color:#202522}
+.studio-art[data-lens] .studio-lens-tabs button[aria-pressed=true]{background:#202522;color:#f2efe7;border-color:#202522}
+.studio-art[data-lens] .studio-lens>p{color:#202522}
+.studio-model{position:relative;align-self:stretch;min-height:290px;width:100%;height:100%;isolation:isolate}
+.studio-model canvas{position:absolute;inset:0;display:block;width:100%;height:100%;z-index:1;filter:drop-shadow(5px 14px 9px #20252220);touch-action:pan-y}
+.studio-model-shadow{position:absolute;left:17%;right:17%;bottom:3%;height:13%;background:radial-gradient(ellipse,#20252225,transparent 68%);filter:blur(8px);pointer-events:none}
+.studio-art .studio-model>.studio-big-mark{position:absolute;width:64%;height:70%;left:18%;top:10%;margin:0}
+.studio-art[data-model-ready=true] .studio-model>.studio-big-mark{visibility:hidden}
+.studio-art .studio-lens{z-index:3}
+.studio-art-lines{pointer-events:none}
+@media(max-width:1100px){.studio-model{min-height:245px}}
+@media(max-width:760px){.studio-art[data-lens]{min-height:455px;grid-template-rows:minmax(240px,1fr) auto}.studio-model{min-height:240px}.studio-model canvas{filter:drop-shadow(3px 9px 7px #2025221c)}}
+@media(prefers-reduced-motion:reduce){.studio-model canvas{animation:none!important;transition:none!important;translate:0 0!important;scale:1!important}}
+[data-motion=off] .studio-model canvas{animation:none!important;transition:none!important;translate:0 0!important;scale:1!important}

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1100" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#302e27"/><stop offset=".5" stop-color="#151613"/><stop offset="1" stop-color="#24251e"/></linearGradient>
+    <linearGradient id="silk" x1="390" y1="120" x2="1030" y2="770" gradientUnits="userSpaceOnUse"><stop stop-color="#11120f"/><stop offset=".32" stop-color="#626051"/><stop offset=".42" stop-color="#b2a98a"/><stop offset=".46" stop-color="#dfd1a5"/><stop offset=".54" stop-color="#66634f"/><stop offset=".7" stop-color="#20231c"/><stop offset="1" stop-color="#11130f"/></linearGradient>
+    <linearGradient id="edge" x1="570" y1="150" x2="820" y2="650" gradientUnits="userSpaceOnUse"><stop stop-color="#f1dfaf"/><stop offset="1" stop-color="#555944"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#a89a68" stop-opacity=".2"/><stop offset="1" stop-color="#b6a06a" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="75" height="75" patternUnits="userSpaceOnUse"><path d="M75 0H0V75" stroke="#e8e0c6" stroke-opacity=".045"/></pattern>
+    <filter id="shadow" x="-50%" y="-50%" width="220%" height="230%"><feDropShadow dx="-12" dy="28" stdDeviation="20" flood-color="#000" flood-opacity=".65"/></filter>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1200v900H0z"/>
+  <path fill="url(#grid)" d="M0 0h1200v900H0z"/>
+  <ellipse cx="830" cy="370" rx="500" ry="420" fill="url(#glow)"/>
+  <g stroke="#ede6d1" stroke-opacity=".16"><path d="M70 100h1060M70 800h1060"/><path d="M70 90v20m1060-20v20M70 790v20m1060-20v20"/></g>
+  <g fill="#e6dfc9" font-family="Arial,Helvetica,sans-serif">
+    <text x="74" y="148" font-size="15" letter-spacing="4">STREETWEAR / DIGITAL COMMERCE</text>
+    <text x="62" y="363" font-size="230" font-weight="700" letter-spacing="-17">AURA</text>
+    <text x="78" y="415" font-size="20" letter-spacing=".2" fill="#bcbba9">An identity you can wear.</text>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M824 173c-93 5-162 48-190 123-29 76-9 150 59 197 44 31 64 60 55 103-11 54-63 97-147 130 127-7 241-66 283-164 31-70 15-131-45-175-40-30-61-59-51-100 10-43 51-81 121-111-31-4-59-5-85-3Z" fill="url(#silk)"/>
+    <path d="M1009 176c-110 30-175 96-168 158 5 38 24 60 55 88 57 53 60 108 20 171-47 74-131 120-227 134 91-44 148-104 148-163 0-47-29-73-71-106-61-49-66-111-24-176 47-74 135-112 267-106Z" fill="url(#silk)"/>
+    <path d="M999 177c-106 37-167 96-163 157 3 41 36 71 63 96M743 722c89-27 154-69 183-119" stroke="url(#edge)" stroke-width="1.5"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" fill="#e6dfc9">
+    <text x="80" y="555" font-size="11" letter-spacing="3" fill="#b9b59e">FROM DISCOVERY TO SELECTION</text>
+    <text x="80" y="595" font-size="28" letter-spacing="-.6">A considered</text>
+    <text x="80" y="632" font-size="28" letter-spacing="-.6">shopping journey.</text>
+  </g>
+  <g transform="translate(80 690)" font-family="Arial,Helvetica,sans-serif">
+    <rect width="175" height="53" rx="26.5" fill="#d6c99f"/>
+    <text x="87.5" y="32" font-size="11" letter-spacing="2" text-anchor="middle" fill="#24251e">COLLECTION</text>
+    <path d="M191 26h36m-6-5 6 5-6 5" stroke="#a9ac94"/>
+    <rect x="244" width="161" height="53" rx="26.5" stroke="#8e937d" stroke-opacity=".6"/>
+    <text x="324.5" y="32" font-size="11" letter-spacing="2" text-anchor="middle" fill="#d9ddcb">PRODUCT</text>
+    <path d="M421 26h36m-6-5 6 5-6 5" stroke="#a9ac94"/>
+    <rect x="474" width="128" height="53" rx="26.5" stroke="#8e937d" stroke-opacity=".6"/>
+    <text x="538" y="32" font-size="11" letter-spacing="2" text-anchor="middle" fill="#d9ddcb">CART</text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="2" fill="#afaf9d">
+    <text x="76" y="839">REACT / TYPESCRIPT</text>
+    <text x="1125" y="839" text-anchor="end">EDITORIAL PROJECT COVER</text>
+  </g>
+</svg>

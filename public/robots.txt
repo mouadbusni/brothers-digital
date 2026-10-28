@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Sitemap: https://brothers-digital-studio.wisesnow.chatgpt.site/sitemap.xml
