@@ -44,3 +44,7 @@ yarn-error.log*
 
 # OS metadata
 .DS_Store
+
+# Standalone Cloudflare Pages build
+/dist-pages/
+wrangler.pages.local.jsonc

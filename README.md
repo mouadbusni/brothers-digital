@@ -110,6 +110,10 @@ The app's previous implementation and browser checks are recorded in [implementa
 
 The final release review and remaining operational setup are recorded in [release checks](docs/release-checks.md).
 
+## Cloudflare Pages
+
+For a free `.pages.dev` address, use the separate `build:pages` target and follow [Cloudflare Pages setup](docs/cloudflare-pages.md). It preserves the bilingual pages, interactions and enquiry backend. The existing Sites build remains available.
+
 ## Attribution
 
 Bundled fonts retain their [typeface license](public/assets/typeface-license.txt). Third-party components and retained tooling keep their supplied license notices in `vendor/` and `scripts/vite/`. Project provenance is recorded in `site-source/projects.mjs` and `docs/github-project-review.json`.

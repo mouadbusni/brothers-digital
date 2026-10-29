@@ -14,7 +14,9 @@
     "db:generate": "drizzle-kit generate",
     "typecheck": "tsc --noEmit",
     "db:local": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_reflective_veda.sql",
-    "test": "node --experimental-strip-types --test tests/*.test.mjs"
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "build:pages": "node scripts/build-pages.mjs",
+    "test:pages": "node --experimental-strip-types --test tests/cloudflare/*.test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -62,7 +64,8 @@
     "typescript": "5.9.3",
     "vinext": "1.0.0-beta.5",
     "vite": "8.0.13",
-    "wrangler": "4.92.0"
+    "wrangler": "4.92.0",
+    "esbuild": "0.28.0"
   },
   "type": "module",
   "overrides": {

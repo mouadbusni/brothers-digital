@@ -36,3 +36,9 @@ jobs:
         run: npm run typecheck
       - name: Build production Worker
         run: npm run build
+      - name: Build Cloudflare Pages
+        run: npm run build:pages
+        env:
+          SITE_ORIGIN: https://build-check.pages.dev
+      - name: Verify Cloudflare Pages
+        run: npm run test:pages
