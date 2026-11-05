@@ -90,7 +90,7 @@
   let mx=0,my=0,tx=0,ty=0;
   const active=()=>canMove()&&visible&&!document.hidden&&root.dataset.intro!=='playing';
   const lastLine=$('.hero-last>span');
-  const headlines=BD.language==='fr'?['Sur mesure','Avec du sens','Pour durer']:['Made for you','With purpose','Built to last'];
+  const headlines=BD.language==='fr'?['Avec nous','Sur mesure','Pour durer']:['With us','Made for you','Built to last'];
   let copyIndex=0,copyTimer=0,copyAnimation=null;
   if(lastLine){$('#hero-heading')?.setAttribute('aria-label',$$('.hero-line').map(el=>el.textContent.trim()).join(' '));lastLine.setAttribute('aria-hidden','true');}
   function stopCopy(){clearTimeout(copyTimer);copyAnimation?.cancel();copyAnimation=null;}
@@ -128,7 +128,7 @@
   function tick(now){
     frame=0;if(!active()){previous=0;return;}
     if(previous)elapsed+=Math.min(now-previous,100)/1000;previous=now;
-    const interval=innerWidth<761?50:33;
+    const interval=innerWidth<761?66:40;
     if(now-last>=interval){mx+=(tx-mx)*.09;my+=(ty-my)*.09;draw();last=now;}
     frame=requestAnimationFrame(tick);
   }

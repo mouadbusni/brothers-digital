@@ -74,9 +74,9 @@ export const projects = [
   },
   {
     id:'identity',title:'Brothers Digital',image:'identity',theme:'identity',color:'#a3aa91',type:['Identité du studio · Built together','Studio identity · Built together'],
-    headline:['Trois esprits.\nUn langage commun.','Three minds.\nOne shared language.'],
+    headline:['Quatre esprits.\nUn langage commun.','Four minds.\nOne shared language.'],
     summary:['Le système visuel de notre propre studio : un signe interconnecté, une palette calme et une présence typographique affirmée.','Our own studio’s visual system: an interlocking mark, a restrained palette and confident typography.'],
-    challenge:['Relier l’énergie de trois fondateurs à une identité cohérente. Le système devait rester identifiable sur le web, les réseaux sociaux et les supports de communication.','Connect the energy of three founders through one coherent identity. The system had to stay recognizable across the web, social content and communication materials.'],
+    challenge:['Relier l’énergie du collectif à une identité cohérente. Le système devait rester identifiable sur le web, les réseaux sociaux et les supports de communication.','Connect the team’s energy through one coherent identity. The system had to stay recognizable across the web, social content and communication materials.'],
     approach:['Le monogramme Interlock traduit la connexion. Les formes entrelacées deviennent un langage graphique, prolongé par les compositions et le mouvement.','The Interlock monogram expresses connection. Its interwoven forms become a graphic language, extended through composition and motion.'],
     decisions:[['Un monogramme construit autour de la relation entre les formes.','Graphite, ivoire et olive : une palette volontairement retenue.','Une typographie franche et des compositions qui laissent respirer le contenu.'],['A monogram built around the relationship between its forms.','Graphite, ivory and olive: an intentionally restrained palette.','Confident typography and layouts that give content room to breathe.']],
     terrain:[['Identité visuelle','Système graphique','Direction artistique'],['Visual identity','Graphic system','Art direction']],

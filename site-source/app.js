@@ -44,7 +44,7 @@
     identity: {
       title: 'Brothers Digital', image: 'assets/identity.png', color: '#a3aa91',
       tag: ['Identité du studio · Built together', 'Studio identity · Built together'],
-      description: ['Une identité pensée pour relier trois esprits créatifs à travers un langage visuel commun.', 'An identity connecting three creative minds through a shared visual language.'],
+      description: ['Une identité pensée pour relier quatre esprits créatifs à travers un langage visuel commun.', 'An identity connecting four creative minds through a shared visual language.'],
       intent: ['Traduire l’idée de collaboration en une identité sobre, expressive et cohérente, du signe aux prises de parole du studio.', 'Translate collaboration into a restrained, expressive and coherent identity, from the mark to the studio’s communications.'],
       approach: ['Un monogramme interconnecté, une palette graphite, ivoire et olive, et une typographie franche. Les formes se prolongent dans les compositions et les supports de communication.', 'An interlocking monogram, a graphite, ivory and olive palette, and confident typography. Its shapes extend naturally into layouts and communication materials.'],
       disciplines: ['Identité visuelle', 'Système graphique', 'Direction artistique'], disciplinesEn: ['Visual identity', 'Graphic system', 'Art direction']

@@ -43,6 +43,14 @@ export function enhanceDocument(html, { language, kind, url, projects, pageRoute
     html = html.replace('<span class="studio-art-coord">BD / 03 → 01</span>', lens.replaceAll('aria-controls="studio-lens-copy"','aria-controls="studio-model studio-lens-copy"'));
   }
   if (kind === 'contact') {
+    const next = `<div class="contact-next"><h3>${t('Et ensuite ?', 'What happens next?')}</h3><ol>${[
+      [t('On découvre votre projet.', 'We get to know your project.'),t('Votre activité, vos besoins et ce qui compte pour vous.', 'Your business, your needs and what matters to you.')],
+      [t('On définit une direction.', 'We find the right direction.'),t('Un périmètre clair, une approche et les prochaines étapes.', 'A clear scope, an approach and the next steps.')],
+      [t('On construit ensemble.', 'We build it together.'),t('Des échanges directs, du premier concept à la mise en ligne.', 'Direct collaboration, from the first concept to launch.')],
+    ].map(([title,body],i)=>`<li><span>0${i+1}</span><div><strong>${title}</strong><p>${body}</p></div></li>`).join('')}</ol></div>`;
+    html = html.replace(/(<span class="contact-location"[^>]*>[\s\S]*?<\/span>)/, '$1'+next);
+    html = html.replace('<form id="enquiry-form">', `<p class="enquiry-starter-note">${t('Pas besoin d’un cahier des charges parfait. Quelques lignes sur votre idée suffisent pour démarrer.', 'You don’t need a perfect brief. A few lines about your idea are enough to start.')}</p><form id="enquiry-form">`);
+
     html = html.replace('<form id="enquiry-form">', `<noscript><style>#enquiry-form{display:none!important}</style><p class="enquiry-note">${t('Le formulaire nécessite JavaScript. Vous pouvez nous contacter directement sur Instagram.', 'This form needs JavaScript. You can contact us directly on Instagram.')}</p></noscript><form id="enquiry-form" method="post" action="/api/inquiries">`);
     html = html.replace('<input name="name"', '<input name="name" aria-describedby="enquiry-status"').replace('<input name="email"', '<input name="email" aria-describedby="enquiry-status"');
     html = html.replace('<fieldset class="enquiry-services">','<fieldset class="enquiry-services" aria-describedby="enquiry-status">');
